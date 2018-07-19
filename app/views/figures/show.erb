@@ -1,1 +1,6 @@
 <h1>Here's someone: <%= @figure.name %></h1>
+<ul>
+  <% @figure.titles.each do |ft| %>
+    <li><%= ft.name %></li>
+  <% end %>
+</ul>

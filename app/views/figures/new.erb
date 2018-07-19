@@ -1,5 +1,19 @@
 <h1>Create a New Historical Figure</h1>
 <form action="/figures" method="post">
-  <input type="text" name="name" value="">
+
+  Name: <input type="text" name="figure[name]" value="">
+  <br>
+  <h2>Titles:</h2>
+  <br>
+
+  Title:
+  <% @titles.each do |title| %>
+  <input type="checkbox" name="title[id][]" value="<%= title.id %>"><%= title.name %>
+  <% end %>
+
+<!--
+  Landmark: <input type="text" name="landmark" value=""> -->
+
+
   <input type="submit" value="submit">
 </form>
