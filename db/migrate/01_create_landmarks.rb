@@ -1,7 +1,5 @@
 class CreateLandmarks < ActiveRecord::Migration
 
-  belongs_to :figure
-
   def change
     create_table :landmarks do |t|
       t.string :name
@@ -10,5 +8,5 @@ class CreateLandmarks < ActiveRecord::Migration
     end
   end
 
-  
+
 end
